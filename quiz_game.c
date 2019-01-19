@@ -33,5 +33,32 @@
    printf("\n\t\t > press H for help            ");
    printf("\n\t\t > press Q to quit             ");
    printf("\n\t\t________________________________________\n\n");
-   
+   choice= toupper(getch()); // Take the input from user. Depends on conio and ctype header files.
+   if (choice == 'V') // To view the highest score
+   {
+     show_record();
+     goto mainhome;
+   }
+   else if (choice == 'H') // To show help
+   {
+     help();
+     getch();
+     goto mainhome;
+   }
+   else if (choice == 'R') // To reset the score
+   {
+     reset_score();
+     getch();
+     goto mainhome;
+   }
+   else if(choice=='Q') // To quit the game
+   {
+     exit(1);
+   }
+   else if(choice =='S') // To clear the screen
+   {
+     system("cls")
+   }
+
+
  }
